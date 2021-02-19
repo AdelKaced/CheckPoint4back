@@ -32,6 +32,7 @@ const deleteOne = async (id) => {
   return result[0];
 };
 
+
 module.exports = {
   findAll,
   findOne,

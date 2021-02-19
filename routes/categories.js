@@ -9,5 +9,6 @@ router.put('/:id', categoriesController.handleUpdate);
 router.delete('/:id', categoriesController.handleDelete);
 
 router.get('/:id/plantes', plantsController.getAll);
+router.post('/:id/plantes', plantsController.handlePost);
 
 module.exports = router;

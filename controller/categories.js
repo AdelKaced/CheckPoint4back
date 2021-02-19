@@ -31,7 +31,7 @@ const handlePost = async (req, res) => {
     const data = await createOne(req.body);
     console.log(data)
     const result = await findOne(data.insertId);
-    res.status(200).json(result[0]);
+    res.status(201).json(result[0]);
   } catch (err) {
     console.log(err.message);
     res.status(500).send('internal server error');
@@ -52,7 +52,7 @@ const handleUpdate = async (req, res) => {
 const handleDelete = async (req, res) => {
   try {
     await deleteOne(req.params.id);
-    res.status(200).send('data has been delete');
+    res.status(204).send('data has been delete');
   } catch (err) {
     console.log(err.message);
     res.status(500).send('internal server error');
